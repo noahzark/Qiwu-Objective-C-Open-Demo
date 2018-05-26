@@ -10,8 +10,8 @@
 #import "NSDictionary+RMQW.h"
 #import "NSString+RMQW.h"
 
-static const NSString *kRobotAppKey = @"cenri-ios-demo";
-static const NSString *kRobotAppSecrect = @"7d530b9597744de1d479b4e222b8260d";
+static const NSString *kRobotAppKey = @"open-demo";
+static const NSString *kRobotAppSecrect = @"123456789";
 
 static const NSString *kKey_appKey = @"appkey";
 static const NSString *kKey_timeStamp = @"timestamp";
@@ -26,7 +26,7 @@ static const NSString *kKey_lang = @"lang";
     
     NSString *timestamp = [NSString rmqw_currentTimeStr]; //时间戳
     NSString *uuid = [NSString rmqw_readUUIDFromKeyChain];//设备唯一标识符
-    NSString *nickName = @"liyunfeng-ios";
+    NSString *nickName = @"王老五";
     NSString *verify  = [NSString stringWithFormat:@"%@%@%@",kRobotAppSecrect, uuid, timestamp];
     NSString *verifyMD5 = [verify rmqw_md5];
     
